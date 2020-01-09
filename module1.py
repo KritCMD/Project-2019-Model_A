@@ -93,5 +93,9 @@ def nose_feat_get(frame,nw,nh):
     return nose_feat
 
 class all_feat:
-    def __init__(self,eye_feat,face_feat,mouth_feat,nose_feat)
+    def __init__(self,eye,face,mouth,nose)
+    self.eye = eye_feat
+    self.face = face_feat
+    self.mouth = mouth_feat
+    self.nose = nose_feat
  
