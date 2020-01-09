@@ -91,11 +91,19 @@ def nose_feat_get(frame,nw,nh):
         return None
     nose_feat=('Nose',nosewperh,noselength)
     return nose_feat
+def ear_feat_get(frame,aw,ah):
+    earwperh=aw/ah
+    earlenght=math.sqrt(aw^2+ah^2)
+    if earlenght==0:
+        return None
+    ear_feat=('ear',earwperh,earlenght)
+    return ear_feat
 
 class all_feat:
-    def __init__(self,eye,face,mouth,nose)
+    def __init__(self,eye,face,mouth,nose,ear)
     self.eye = eye_feat
     self.face = face_feat
     self.mouth = mouth_feat
     self.nose = nose_feat
+    self.ear = ear_feat
  
