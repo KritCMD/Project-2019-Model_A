@@ -60,7 +60,7 @@ def detect(gray, frame):
         ear = ear_cascade.detectMultiScale(roi_gray, 1.1, 1)
         for (eax,eay,eaw,eah) in ear:
             cv2.rectangle(roi_color, (eax,eay), (eax+eaw, eay+eah), (255, 255, 255), 1)
-            print(ear_feat_get(frame,aw,ah))
+            print(ear_feat_get(frame,eaw,eah))
         
     return frame
 def eye_feat_get(frame,ew,eh,w,h):
@@ -92,9 +92,9 @@ def nose_feat_get(frame,nw,nh):
         return None
     nose_feat=('Nose',nosewperh,noselength)
     return nose_feat
-def ear_feat_get(frame,aw,ah):
-    earwperh=aw/ah
-    earlenght=math.sqrt(aw^2+ah^2)
+def ear_feat_get(frame,eaw,eah):
+    earwperh=eaw/eah
+    earlenght=math.sqrt(eaw^2+eah^2)
     if earlenght==0:
         return None
     ear_feat=('ear',earwperh,earlenght)
